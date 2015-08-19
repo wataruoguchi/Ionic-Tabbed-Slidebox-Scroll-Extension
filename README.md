@@ -25,4 +25,24 @@ Load the module
 angular.module("starter", ["ionic", "tabSlideBox", "tabSlideBoxScrollExtension"])
 ```
 
+HTML structure example
+
+```html
+    <ion-slide>
+      <ion-nav-view name="tab-something-list">
+        <ion-view view-title="something-list">
+          <ion-content>
+            <ion-list ng-controller="ListCtrl as listctrl">
+              <ion-item class="item-remove-animate" ng-repeat="row in listctrl.rows" type="item-text-wrap">
+                <img ng-src="{{row.img}}">
+                <p>{{row.firstname}}</p>
+                <p>{{row.lastname}}</p>
+              </ion-item>
+            </ion-list>
+          </ion-content>
+        </ion-view>
+      </ion-nav-view>
+    </ion-slide>
+```
+
 Easy!
